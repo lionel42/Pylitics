@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "-t",
+        "py310",
+        "--line-length",
+        "79"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    }
+}

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pylitics
+Version: 0.0.1
+Summary: Python politics package
+Home-page: UNKNOWN
+Author: Lionel42
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This is a python programm that attempts to model the political spectrum.
+
+It considers the political space to be a set of variable where
+every one resides at one spot on the diagram.
+
+
+The variables go from 0 to 1, where 0.5 means the person is indiferent,
+0 if the person is againts and 1 if the person is in favor.
+

@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+pylitics/pylitics.egg-info/PKG-INFO
+pylitics/pylitics.egg-info/SOURCES.txt
+pylitics/pylitics.egg-info/dependency_links.txt
+pylitics/pylitics.egg-info/top_level.txt
