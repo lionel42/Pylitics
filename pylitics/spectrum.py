@@ -1,7 +1,8 @@
 """Representing the political spectrum."""
-
+from __future__ import annotations
 
 from dataclasses import dataclass
+from tkinter.font import names
 from typing import TYPE_CHECKING, List
 
 from .views import ViewEnum
@@ -15,6 +16,26 @@ class Spectrum:
     """Model of a political spectrum."""
 
     views: List[ViewEnum]
+
+    def __init__(self, views: List[ViewEnum | str]) -> None:
+        if isinstance(views[0], str):
+            custom_view = ViewEnum("CustomView", views)
+            views = [getattr(custom_view, s) for s in views]
+        self.views = views
+
+    def __str__(self) -> str:
+        print(type(self.views))
+        return f"{type(self).__name__} with views: \n" "{}".format(
+            "\n".join([str(v) for v in self.views])
+        )
+
+    def __len__(self):
+        return len(self.views)
+
+    def __getitem__(self, __index: int) -> ViewEnum:
+
+        print(self.views)
+        return self.views[__index]
 
 
 class Point:

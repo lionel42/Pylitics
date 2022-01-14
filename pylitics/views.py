@@ -27,3 +27,4 @@ class Views(ViewEnum):
     ENVIRONNEMENT_PROTECTION = auto()
     POLICE_SUPPORT = auto()
     URBAN = auto()
+    CONSERVATISM = auto()

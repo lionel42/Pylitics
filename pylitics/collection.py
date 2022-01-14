@@ -18,6 +18,7 @@ class PointsCollection:
 
     _axis: List[ViewEnum]
     _array: np.ndarray
+    labels: List[str]
 
     def __init__(self, spectrum: Spectrum) -> None:
         self.spectrum = spectrum
@@ -27,6 +28,11 @@ class PointsCollection:
 
     def read_points(self, *points: Point):
         """Read points and add them to the collection."""
+
+        if len(points) == 1 and isinstance(points[0], np.ndarray):
+            # Array was given, copy it
+            self._array = points[0]
+            return
         self._array = np.concatenate(
             (
                 self._array,
